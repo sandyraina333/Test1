@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colleges by Department</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .department-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .department-item {
+      margin-bottom: 20px;
+    }
+
+    .department-name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .college-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .college-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .college-name {
+      flex: 1;
+    }
+
+    .college-button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .button-engineering {
+      background-color: #6ba1ff;
+    }
+
+    .button-medical {
+      background-color: #ff622e;
+    }
+
+    .button-management {
+      background-color: #f36f1d;
+    }
+
+    .button-arts {
+      background-color: #82d8a7;
+    }
+
+    .button-law {
+      background-color: #f5853f;
+    }
+  </style>
+</head>
+<body>
+  <h1>Colleges by Department</h1>
+   <div class="home-button">
+    <a href="sure.html">HOME</a>
+  </div>
+  <ul class="department-list">
+    <li class="department-item">
+      <h2 class="department-name">Engineering</h2>
+      <ul class="college-list">
+        <li class="college-item">
+          <span class="college-name">Indian Institute of Technology (IITs)</span>
+          <button class="college-button button-engineering" onclick="redirect('https://www.iitsystem.ac.in/')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">National Institute of Technology (NITs)</span>
+          <button class="college-button button-engineering" onclick="redirect('https://www.nit.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Birla Institute of Technology and Science (BITS)</span>
+          <button class="college-button button-engineering" onclick="redirect('https://www.bits-pilani.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Delhi Technological University (DTU)</span>
+          <button class="college-button button-engineering" onclick="redirect('https://www.dtu.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Vellore Institute of Technology (VIT)</span>
+          <button class="college-button button-engineering" onclick="redirect('https://www.vit.ac.in')">Visit</button>
+        </li>
+        <!-- Add more colleges -->
+      </ul>
+    </li>
+    <li class="department-item">
+      <h2 class="department-name">Medical</h2>
+      <ul class="college-list">
+        <li class="college-item">
+          <span class="college-name">All India Institute of Medical Sciences (AIIMS), Delhi</span>
+          <button class="college-button button-medical" onclick="redirect('https://www.aiims.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Christian Medical College (CMC), Vellore</span>
+          <button class="college-button button-medical" onclick="redirect('https://www.cmch-vellore.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Maulana Azad Medical College (MAMC), Delhi</span>
+          <button class="college-button button-medical" onclick="redirect('https://www.mamc.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Armed Forces Medical College (AFMC), Pune</span>
+          <button class="college-button button-medical" onclick="redirect('https://www.afmc.nic.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">King George's Medical University (KGMU), Lucknow</span>
+          <button class="college-button button-medical" onclick="redirect('https://www.kgmu.org')">Visit</button>
+        </li>
+        <!-- Add more colleges -->
+      </ul>
+    </li>
+    <li class="department-item">
+      <h2 class="department-name">Business/Management</h2>
+      <ul class="college-list">
+        <li class="college-item">
+          <span class="college-name">Indian Institutes of Management (IIMs)</span>
+          <button class="college-button button-management" onclick="redirect('https://www.iim.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Faculty of Management Studies (FMS), University of Delhi</span>
+          <button class="college-button button-management" onclick="redirect('https://www.fms.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Xavier School of Management (XLRI), Jamshedpur</span>
+          <button class="college-button button-management" onclick="redirect('https://www.xlri.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Indian School of Business (ISB), Hyderabad</span>
+          <button class="college-button button-management" onclick="redirect('https://www.isb.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">S.P. Jain Institute of Management and Research (SPJIMR), Mumbai</span>
+          <button class="college-button button-management" onclick="redirect('https://www.spjimr.org')">Visit</button>
+        </li>
+        <!-- Add more colleges -->
+      </ul>
+    </li>
+    <li class="department-item">
+      <h2 class="department-name">Arts/Humanities</h2>
+      <ul class="college-list">
+        <li class="college-item">
+          <span class="college-name">St. Stephen's College, Delhi</span>
+          <button class="college-button button-arts" onclick="redirect('https://www.ststephens.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Lady Shri Ram College for Women (LSR), Delhi</span>
+          <button class="college-button button-arts" onclick="redirect('https://www.lsr.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Loyola College, Chennai</span>
+          <button class="college-button button-arts" onclick="redirect('https://www.loyolacollege.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Presidency College, Kolkata</span>
+          <button class="college-button button-arts" onclick="redirect('https://www.presidency.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">Miranda House, Delhi</span>
+          <button class="college-button button-arts" onclick="redirect('https://www.mirandahouse.ac.in')">Visit</button>
+        </li>
+        <!-- Add more colleges -->
+      </ul>
+    </li>
+    <li class="department-item">
+      <h2 class="department-name">Law</h2>
+      <ul class="college-list">
+        <li class="college-item">
+          <span class="college-name">National Law School of India University (NLSIU), Bangalore</span>
+          <button class="college-button button-law" onclick="redirect('https://www.nls.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">National Law University, Delhi (NLUD)</span>
+          <button class="college-button button-law" onclick="redirect('https://www.nludelhi.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">NALSAR University of Law, Hyderabad</span>
+          <button class="college-button button-law" onclick="redirect('https://www.nalsar.ac.in')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">West Bengal National University of Juridical Sciences (NUJS), Kolkata</span>
+          <button class="college-button button-law" onclick="redirect('https://www.nujs.edu')">Visit</button>
+        </li>
+        <li class="college-item">
+          <span class="college-name">National Law University, Jodhpur (NLUJ)</span>
+          <button class="college-button button-law" onclick="redirect('https://www.nlujodhpur.ac.in')">Visit</button>
+        </li>
+        <!-- Add more colleges -->
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    function redirect(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
+

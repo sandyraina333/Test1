@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colleges Offering Open PhD Programs in India</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .college-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .college-item {
+      margin: 10px;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .college-item:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .college-item span {
+      font-weight: bold;
+    }
+    
+    .redirect-button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: rgb(240, 240, 240);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .redirect-button:hover {
+      background-color: rgb(200, 200, 200);
+    }
+    
+    .redirect-button::after {
+      content: '->';
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      color: #000;
+    }
+    
+    .home-button {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .home-button a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Colleges Offering Open PhD Programs in India</h1>
+  <ul class="college-list" id="college-list"></ul>
+  
+  <div class="home-button">
+    <a href="sure.html">HOME</a>
+  </div>
+
+  <script>
+    const colleges = [
+      { name: 'Indian Institutes of Management (IIMs)', url: 'https://www.education.gov.in/iits' },
+      { name: 'Jawaharlal Nehru University (JNU), Delhi', url: 'https://www.jnu.ac.in/main/' },
+      { name: 'University of Delhi, Delhi', url: 'https://www.du.ac.in/' },
+      { name: 'Tata Institute of Fundamental Research (TIFR), Mumbai', url: 'https://www.tifr.res.in/' }
+      // Add more colleges here
+    ];
+
+    const collegeList = document.getElementById('college-list');
+
+    function getRandomColor() {
+      const colors = ['#f44336', '#4caf50', '#2196f3', '#ff9800', '#9c27b0', '#009688', '#e91e63', '#673ab7'];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    colleges.forEach(college => {
+      const li = document.createElement('li');
+      li.className = 'college-item';
+      
+      const span = document.createElement('span');
+      span.className = 'college-name';
+      span.textContent = college.name;
+      
+      const button = document.createElement('button');
+      button.className = 'redirect-button';
+      button.onclick = () => {
+        window.location.href = college.url;
+      };
+      
+      li.appendChild(span);
+      li.appendChild(button);
+      
+      const randomColor = getRandomColor();
+      li.style.backgroundColor = randomColor;
+      
+      collegeList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
+

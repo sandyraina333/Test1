@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Master's Colleges in India</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      border: 2px solid #000;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+    }
+    
+    .college-name {
+      font-weight: bold;
+    }
+    
+    .redirect-button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: rgb(240, 240, 240);
+      border: none;
+      cursor: pointer;
+    }
+    
+    .redirect-button:hover {
+      background-color: rgb(200, 200, 200);
+    }
+    
+    .redirect-button::after {
+      content: '->';
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      color: #000;
+    }
+    
+    /* Additional styles for different background colors */
+    
+    .college-blue {
+      background-color: #c7ecee;
+    }
+    
+    .college-green {
+      background-color: #7bed9f;
+    }
+    
+    .college-red {
+      background-color: #ff7675;
+    }
+    
+    .college-orange {
+      background-color: #fdcb6e;
+    }
+    
+    .college-purple {
+      background-color: #a29bfe;
+    }
+  </style>
+</head>
+<body>
+  <h1>Master's Colleges in India</h1>
+     <div class="home-button">
+    <a href="sure.html">HOME</a>
+  </div>
+  <ul>
+    <li class="college-blue">
+      <span class="college-name">Indian Institutes of Technology (IITs)</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.iitb.ac.in/'"></button>
+    </li>
+    <li class="college-green">
+      <span class="college-name">Indian Institutes of Management (IIMs)</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.education.gov.in/technical-education-3'"></button>
+    </li>
+    <li class="college-red">
+      <span class="college-name">Jawaharlal Nehru University (JNU), Delhi</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.jnu.ac.in/main/'"></button>
+    </li>
+    <li class="college-orange">
+      <span class="college-name">University of Delhi, Delhi</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.du.ac.in/'"></button>
+    </li>
+    <li class="college-purple">
+      <span class="college-name">Anna University, Chennai</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.annauniv.edu/'"></button>
+    </li>
+    <!-- Add more list items here -->
+    <li class="college-blue">
+      <span class="college-name">University of Mumbai, Mumbai</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://mu.ac.in/'"></button>
+    </li>
+    <li class="college-green">
+      <span class="college-name">University of Calcutta, Kolkata</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.caluniv.ac.in/'"></button>
+    </li>
+    <li class="college-red">
+      <span class="college-name">Jadavpur University, Kolkata</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.jaduniv.edu.in'"></button>
+    </li>
+    <li class="college-orange">
+      <span class="college-name">Banaras Hindu University (BHU), Varanasi</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.bhu.ac.in/Site/Home/1_2_16_Main-Site'"></button>
+    </li>
+    <li class="college-purple">
+      <span class="college-name">University of Madras, Chennai</span>
+      <button class="redirect-button" onclick="window.location.href = 'https://www.unom.ac.in/'"></button>
+    </li>
+    <!-- Add more list items here -->
+  </ul>
+</body>
+</html>
+

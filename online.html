@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free Online Courses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .platform-name {
+      font-weight: bold;
+      flex: 1;
+    }
+    
+    .platform-button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .button-coursera {
+      background-color: #6ba1ff;
+    }
+    
+    .button-suretrust {
+      background-color: #ff622e;
+    }
+    
+    .button-udemy {
+      background-color: #f36f1d;
+    }
+    
+    .button-khanacademy {
+      background-color: #82d8a7;
+    }
+    
+    .button-mit {
+      background-color: #f5853f;
+    }
+    
+    .button-harvard {
+      background-color: #a860b5;
+    }
+    
+    .button-codecademy {
+      background-color: #45b3e0;
+    }
+    
+    .button-stanford {
+      background-color: #f9b600;
+    }
+    
+    .button-futurelearn {
+      background-color: #2d4059;
+    }
+    
+    .button-alison {
+      background-color: #bea7e2;
+    }
+    
+    .button-google {
+      background-color: #4c8bf5;
+    }
+    
+    .button-openlearn {
+      background-color: #ed694a;
+    }
+    
+    .button-microsoft {
+      background-color: #7cbb37;
+    }
+    
+    .button-udacity {
+      background-color: #02b3e4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Free Online Courses</h1>
+     <div class="home-button">
+    <a href="sure.html">HOME</a>
+  </div>
+  <ul id="course-list"></ul>
+
+  <script>
+    const courses = [
+      { name: 'Coursera', buttonClass: 'button-coursera', url: 'http://www.coursera.org' },
+      { name: 'SURE Trust', buttonClass: 'button-suretrust', url: 'https://suretrustforruralyouth.com/' },
+      { name: 'Udemy', buttonClass: 'button-udemy', url: 'http://www.udemy.com' },
+      { name: 'Khan Academy', buttonClass: 'button-khanacademy', url: 'http://www.khanacademy.org' },
+      { name: 'MIT OpenCourseWare', buttonClass: 'button-mit', url: 'http://ocw.mit.edu' },
+      { name: 'Harvard Online Learning', buttonClass: 'button-harvard', url: 'http://online-learning.harvard.edu' },
+      { name: 'Codecademy', buttonClass: 'button-codecademy', url: 'http://www.codecademy.com' },
+      { name: 'Stanford Online', buttonClass: 'button-stanford', url: 'http://online.stanford.edu' },
+      { name: 'FutureLearn', buttonClass: 'button-futurelearn', url: 'http://www.futurelearn.com' },
+      { name: 'Alison', buttonClass: 'button-alison', url: 'http://alison.com' },
+      { name: 'Google Digital Garage', buttonClass: 'button-google', url: 'http://learndigital.withgoogle.com/digitalgarage' },
+      { name: 'OpenLearn', buttonClass: 'button-openlearn', url: 'http://www.open.edu/openlearn' },
+      { name: 'Microsoft Learn', buttonClass: 'button-microsoft', url: 'http://learn.microsoft.com' },
+      { name: 'Udacity', buttonClass: 'button-udacity', url: 'http://www.udacity.com' }
+    ];
+
+    const courseList = document.getElementById('course-list');
+
+    courses.forEach(course => {
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.className = 'platform-name';
+      span.textContent = course.name;
+      li.appendChild(span);
+
+      const button = document.createElement('button');
+      button.className = `platform-button ${course.buttonClass}`;
+      button.textContent = 'Visit';
+      button.addEventListener('click', () => {
+        window.open(course.url, '_blank');
+      });
+      li.appendChild(button);
+
+      courseList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
+
